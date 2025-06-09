@@ -1,4 +1,4 @@
-# EventHub - React Event Management Application
+# React Event Management Application with Authorization
 
 A modern, full-stack event management application built with React Router v6 and Express.js. Create, view, edit, and delete events with JWT-based authentication and a clean, intuitive interface.
 
