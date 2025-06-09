@@ -37,6 +37,7 @@ async function loadEvent(id) {
   }
 }
 
+// Tüm etkinliklerin listesini API'dan çeker
 async function loadEvents() {
   const response = await fetch("http://localhost:8080/events");
 
@@ -50,6 +51,7 @@ async function loadEvents() {
   }
 }
 
+// Route Loader Fonksiyonu
 export async function loader({ request, params }) {
   const id = params.eventId; 
 
