@@ -1,0 +1,58 @@
+.header {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  display: flex;
+  gap: 1rem;
+  align-items: center; /* Vertical hizalama */
+}
+
+.list a {
+  color: var(--color-primary-400);
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.list a:hover,
+.list a:active,
+.list a.active {
+  background-color: var(--color-primary-600);
+  color: var(--color-gray-900);
+}
+
+/* Form ve button için styling */
+.list form {
+  margin: 0; /* Form'un default margin'ını sıfırla */
+  display: inline; /* Form'u inline yap */
+}
+
+.list button {
+  /* Link'lerle aynı styling */
+  color: var(--color-primary-400);
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  
+  /* Button-specific styling */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit; /* Parent'tan font-size'ı al */
+  font-family: inherit; /* Parent'tan font-family'yi al */
+  display: inline-block; /* Inline-block layout */
+  text-decoration: none;
+  vertical-align: middle; /* Vertical hizalama */
+}
+
+.list button:hover,
+.list button:active {
+  background-color: var(--color-primary-600);
+  color: var(--color-gray-900);
+}

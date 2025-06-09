@@ -1,0 +1,63 @@
+/* Newsletter Component Styles */
+.newsletter {
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.newsletter input {
+  flex: 1;
+  font: inherit;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--color-gray-300);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  background-color: white;
+  color: var(--color-gray-800);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.newsletter input:focus {
+  border-color: var(--color-primary-500);
+}
+
+.newsletter input::placeholder {
+  color: var(--color-gray-400);
+}
+
+.newsletter button {
+  font: inherit;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--color-primary-500);
+  border-radius: 0 8px 8px 0;
+  background-color: var(--color-primary-600);
+  color: var(--color-gray-800);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.newsletter button:hover {
+  background-color: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+  transform: translateY(-1px);
+}
+
+.newsletter button:active {
+  transform: translateY(0);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .newsletter input {
+    background-color: var(--color-gray-800);
+    color: var(--color-gray-100);
+    border-color: var(--color-gray-600);
+  }
+  
+  .newsletter input:focus {
+    border-color: var(--color-primary-400);
+  }
+}

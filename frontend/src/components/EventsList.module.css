@@ -1,0 +1,125 @@
+/* Events Component Styles */
+.events {
+  margin: 2rem auto;
+  max-width: 42rem;
+  padding: 0 1rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.item {
+  transition: transform 0.2s ease;
+}
+
+.item a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  background-color: var(--color-gray-800);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-gray-700);
+}
+
+.item a:hover {
+  transform: translateY(-4px);
+  background-color: var(--color-gray-700);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border-color: var(--color-gray-600);
+}
+
+.item a:focus {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+.item img {
+  width: 35%;
+  min-height: 120px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.item a:hover img {
+  transform: scale(1.05);
+}
+
+.content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item h2 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-gray-100);
+}
+
+.item p {
+  margin: 0;
+  color: var(--color-gray-300);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .events {
+    margin: 1rem auto;
+    padding: 0 0.75rem;
+  }
+  
+  .list {
+    gap: 1rem;
+  }
+  
+  .item a {
+    flex-direction: column;
+  }
+  
+  .item img {
+    width: 100%;
+    min-height: 180px;
+  }
+  
+  .content {
+    padding: 1.25rem;
+  }
+  
+  .item h2 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Loading state placeholder */
+.item.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.item.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
